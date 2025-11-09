@@ -18,27 +18,29 @@ function openGradeModal(grade) {
     "11": "کلید پایه یازدهم",
     "12": "کلید پایه دوازدهم"
   };
-
   gradeTitle.innerText = grades[grade];
   gradeText.innerText = "در حال آماده‌سازی...";
-
   gradeModal.style.display = "block";
-  setTimeout(() => gradeModal.classList.add("show"), 10);
+  setTimeout(() => gradeModal.querySelector(".grade-3d").classList.add("show"), 10);
 }
 
 function closeGradeModal() {
-  gradeModal.classList.remove("show");
+  gradeModal.querySelector(".grade-3d").classList.remove("show");
   setTimeout(() => gradeModal.style.display = "none", 500);
 }
 
+/* مودال ادمین */
 const adminModal = document.getElementById("adminModal");
+const adminContent = adminModal.querySelector(".admin-modal");
 
 function openAdminModal() {
   adminModal.style.display = "block";
+  setTimeout(() => adminContent.classList.add("show"), 10);
 }
 
 function closeAdminModal() {
-  adminModal.style.display = "none";
+  adminContent.classList.remove("show");
+  setTimeout(() => adminModal.style.display = "none", 500);
 }
 
 window.addEventListener("click", e => {
