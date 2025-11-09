@@ -78,6 +78,8 @@ header {
 .center-text p {
   font-size: 1.1rem;
   color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
 .info-box {
@@ -204,7 +206,7 @@ footer .royal {
 }
 .admin-float:hover { transform: scale(1.2); }
 
-/* 🌀 مودال سه‌بعدی */
+/* 🌀 مودال پایه‌ها و ادمین */
 .modal {
   display: none;
   position: fixed;
@@ -228,7 +230,8 @@ footer .royal {
   transition: all 0.6s ease;
 }
 
-.modal.show .modal-content {
+.grade-3d.show,
+.admin-modal.show {
   transform: rotateY(0deg) scale(1);
   opacity: 1;
 }
@@ -254,75 +257,22 @@ footer .royal {
 }
 .bottom-left { bottom: 90px; left: 20px; }
 .bottom-right { bottom: 90px; right: 20px; }
+
 /* موبایل / صفحه کوچک */
 @media (max-width: 768px) {
 
-  /* اندازه هدر کوچکتر */
-  header {
-    font-size: 1.8rem;
-    padding: 20px;
-  }
+  header { font-size: 1.8rem; padding: 20px; }
+  .center-text h1.spark-title { font-size: 2rem; }
+  .center-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px; }
 
-  /* متن مرکزی */
-  .center-text h1.spark-title {
-    font-size: 2rem;
-  }
-  .center-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+  .info-box { width: 90%; padding: 20px; font-size: 0.95rem; line-height: 1.8; }
+  .join-box { width: 90%; padding: 12px 20px; font-size: 1rem; }
+  .channel-link { font-size: 1rem; }
 
-  /* info-box بزرگتر روی موبایل */
-  .info-box {
-    width: 90%;
-    padding: 20px;
-    font-size: 0.95rem;
-    line-height: 1.8;
-  }
-
-  /* join-box */
-  .join-box {
-    width: 90%;
-    padding: 12px 20px;
-    font-size: 0.95rem;
-  }
-  .channel-link {
-    font-size: 0.95rem;
-  }
-
-  /* دکمه‌ها کوچکتر و جمع و جورتر */
-  .buttons .btn {
-    padding: 12px 20px;
-    margin: 8px;
-    font-size: 1rem;
-  }
-
-  /* مودال */
-  .modal-content {
-    width: 90%;
-    margin: 15% auto;
-    padding: 20px;
-  }
-
-  /* متن مودال */
-  #gradeText {
-    font-size: 0.95rem;
-  }
-
-  /* corner-box ها کوچکتر */
-  .corner-box {
-    font-size: 0.8rem;
-    padding: 8px 12px;
-  }
-
-  /* لینک گروه و ادمین */
-  .group-link, .admin-float {
-    padding: 10px 16px;
-    font-size: 0.85rem;
-  }
-  .admin-float {
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
-  }
+  .buttons .btn { padding: 12px 20px; margin: 8px; font-size: 1rem; }
+  .modal-content { width: 90%; margin: 15% auto; padding: 20px; }
+  #gradeText { font-size: 0.95rem; }
+  .corner-box { font-size: 0.8rem; padding: 8px 12px; }
+  .group-link, .admin-float { padding: 10px 16px; font-size: 0.85rem; }
+  .admin-float { width: 45px; height: 45px; font-size: 22px; }
 }
