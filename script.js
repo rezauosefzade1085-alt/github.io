@@ -5,7 +5,7 @@ const gradeText = document.getElementById("gradeText");
 
 // لینک دانلود جداگانه برای هر پایه
 const gradeDownloads = {
-  "7": "downloads/paye7.pdf",
+  "7": "https://quera.org/qbox/view/zCvWVft63E/Online-p1-cover.jpg",
   "8": "downloads/paye8.pdf",
   "9": "downloads/paye9.pdf",
   "10": "downloads/paye10.pdf",
