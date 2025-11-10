@@ -1,11 +1,10 @@
-// دسترسی به مودال و المان‌های داخلی
 const gradeModal = document.getElementById("gradeModal");
 const gradeTitle = document.getElementById("gradeTitle");
 const gradeText = document.getElementById("gradeText");
 
-// لینک دانلود جداگانه برای هر پایه
+// لینک دانلود برای هر پایه (PDF)
 const gradeDownloads = {
-  "7": "https://quera.org/qbox/view/zCvWVft63E/Online-p1-cover.jpg",
+  "7": "downloads/paye7.pdf",
   "8": "downloads/paye8.pdf",
   "9": "downloads/paye9.pdf",
   "10": "downloads/paye10.pdf",
@@ -13,7 +12,7 @@ const gradeDownloads = {
   "12": "downloads/paye12.pdf"
 };
 
-// کلیک روی دکمه‌ها
+// وقتی روی دکمه‌ها کلیک می‌کنی
 document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const grade = btn.getAttribute("data-grade");
@@ -32,19 +31,27 @@ function openGradeModal(grade) {
     "12": "کلید پایه دوازدهم"
   };
 
-  // عنوان مودال
   gradeTitle.innerText = grades[grade];
 
-  // متن مودال همراه با دکمه دانلود
   gradeText.innerHTML = `
-    در حال آماده‌سازی...
-    <br><br>
-    <a id="downloadLink" href="${gradeDownloads[grade]}" download class="btn" style="margin-top:15px;">⬇ دانلود فایل</a>
+    <p>فایل کلید مربوط به این پایه آماده‌ی دانلود است 📄</p>
+    <br>
+    <button id="downloadBtn" class="btn" style="margin-top:10px;">⬇ دانلود فایل PDF</button>
   `;
 
-  // نمایش مودال
   gradeModal.style.display = "block";
   setTimeout(() => gradeModal.classList.add("show"), 10);
+
+  // وقتی دکمه دانلود زده میشه
+  const downloadBtn = document.getElementById("downloadBtn");
+  downloadBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = gradeDownloads[grade];
+    link.download = gradeDownloads[grade].split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
 }
 
 // بستن مودال پایه‌ها
