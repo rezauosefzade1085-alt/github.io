@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div id="bg3d"></div> <!-- 🌌 پس‌زمینه سه‌بعدی -->
+  <div id="bg3d"></div>
 
   <header>رویال 🔑 کانال کلید زنی</header>
 
@@ -40,16 +40,48 @@
 
     <div class="join-box">
       <p>به کانال ما بپیوندید:</p>
-      <a href="https://rubika.ir/joinc/BIHJFGFH0XLCOHEDPBABSMVANVTJYMPO" class="channel-link">@Klidghalamchi💜</a>
+      <a href="https://rubika.ir/klid_ghalmchi/BEDGIJBGFBHHAAGI" class="channel-link">@klid_ghalmchi💜</a>
     </div>
 
     <div class="buttons">
-      <button class="btn" data-grade="7">کلید پایه هفتم</button>
-      <button class="btn" data-grade="8">کلید پایه هشتم</button>
-      <button class="btn" data-grade="9">کلید پایه نهم</button>
-      <button class="btn" data-grade="10">کلید پایه دهم</button>
-      <button class="btn" data-grade="11">کلید پایه یازدهم</button>
-      <button class="btn" data-grade="12">کلید پایه دوازدهم</button>
+
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="7"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه هفتم 
+      </button>
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="8"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه هشتم 
+      </button>
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="9"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+      دانلود کلید پایه نهم
+      </button>
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="10"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه دهم
+      </button>
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="11"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه یازدهم
+      </button>
+      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
+      <button class="btn download-btn"
+        data-grade="12"
+        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه دوازدهم
+      </button>
+
     </div>
   </main>
 
@@ -62,7 +94,6 @@
 
   <a href="#" class="admin-float" onclick="openAdminModal()" title="ارتباط با ادمین">💬</a>
 
-  <!-- 🔹 مودال پایه‌ها -->
   <div id="gradeModal" class="modal">
     <div class="modal-content grade-3d">
       <span class="close" onclick="closeGradeModal()">&times;</span>
@@ -71,7 +102,6 @@
     </div>
   </div>
 
-  <!-- 🔹 مودال ادمین -->
   <div id="adminModal" class="modal">
     <div class="modal-content admin-modal">
       <span class="close" onclick="closeAdminModal()">&times;</span>
@@ -84,5 +114,16 @@
   <div class="corner-box bottom-right">🔥 Royal همراه تو تا قله‌ی موفقیت!</div>
 
   <script src="script.js"></script>
+
+  <!-- 📥 اسکریپت دکمه دانلود -->
+  <script>
+    document.querySelectorAll(".download-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const file = btn.getAttribute("data-file");
+        window.open(file, "_blank");
+      });
+    });
+  </script>
+
 </body>
 </html>
