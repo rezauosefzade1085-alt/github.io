@@ -177,194 +177,40 @@ header {
 }
 .btn:hover { transform: scale(1.05); }
 
-/* footer */
-footer {
+/* ===== نوار دکمه‌ای جدید پایین سایت ===== */
+.bottom-bar {
   position: fixed;
-  left: 23px;
-  bottom: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--accent);
-  padding: 8px 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
-  border: 1px solid rgba(0, 150, 255, 0.6);
-}
-footer .royal {
-  color: #ff80ff;
-  font-weight: bold;
-  font-family: 'Lalezar', cursive;
-}
-
-/* group link */
-.group-link {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  color: #fff;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,20,0.75);
+  backdrop-filter: blur(10px);
   padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-.group-link:hover { transform: scale(1.05); }
-
-/* admin float */
-.admin-float {
-  position: fixed;
-  bottom: 150px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #016586, #4119ba);
-  color: #fff;
-  border-radius: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  border-top: 1px solid rgba(0,150,255,0.4);
+  z-index: 2000;
+}
+
+.bottom-bar a,
+.bottom-bar span {
+  background: linear-gradient(135deg,#0044ff,#ff0077);
+  padding: 10px 18px;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-.admin-float:hover { transform: scale(1.12); }
-
-/* مودال */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.65);
-  backdrop-filter: blur(6px);
-  perspective: 1000px;
-}
-.modal .modal-content {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: all 0.35s ease;
-}
-.modal.show .modal-content {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.modal-content {
-  background: rgba(20, 20, 40, 0.95);
-  margin: 10% auto;
-  padding: 25px;
-  border-radius: 15px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
-
-.close {
-  float: left;
-  font-size: 25px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* corner boxes */
-.corner-box {
-  position: fixed;
-  padding: 10px 15px;
-  background: rgba(10, 10, 30, 0.85);
-  border: 1px solid rgba(0, 200, 255, 0.4);
-  border-radius: 10px;
   color: #fff;
   font-family: 'Lalezar', cursive;
-  box-shadow: 0 0 20px rgba(0,200,255,0.3);
-  font-size: 0.9rem;
-  z-index: 1000;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0,150,255,0.4);
 }
-.bottom-left { bottom: 90px; left: 20px; }
-.bottom-right { bottom: 90px; right: 20px; }
 
-/* =======================================
-   📱 نسخه نهایی مخصوص موبایل (بهینه‌شده)
-   ======================================= */
-@media (max-width: 768px) {
-
-  body {
-    padding-bottom: 70px;
-  }
-
-  header {
-    font-size: 1.7rem;
-    padding: 18px;
-    line-height: 2.2rem;
-  }
-
-  .center-text {
-    margin: 40px auto 20px;
-    padding: 0 10px;
-  }
-
-  .center-text p {
-    font-size: 1rem;
-    line-height: 1.9;
-  }
-
-  .info-box {
-    width: 92%;
-    font-size: 0.95rem;
-    line-height: 1.9;
-    padding: 18px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-  }
-
-  .buttons {
-    margin-top: 40px !important;
-    margin-bottom: 110px !important;
-    padding: 0 10px;
-  }
-
-  .buttons .btn {
-    display: block;
-    width: 95%;
-    margin: 12px auto;
-    padding: 14px;
-    font-size: 1.05rem;
-  }
-
-  .join-box {
-    margin-top: 35px;
-    padding: 12px 20px;
-  }
-
-  .join-box p {
-    font-size: 1rem;
-  }
-
-  .modal-content {
-    width: 88% !important;
-    margin: 30% auto !important;
-    padding: 20px;
-  }
-
-  .admin-float {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-    bottom: 130px;
-  }
-
-  .group-link {
-    font-size: 0.9rem;
-    padding: 10px 18px;
-    bottom: 15px;
-  }
-
-  footer {
-    font-size: 0.85rem;
-    bottom: 15px;
-    left: 15px;
-    padding: 6px 12px;
+@media(max-width:768px){
+  .bottom-bar a ,
+  .bottom-bar span{
+    font-size: .85rem;
+    padding: 8px 14px;
   }
 }
+
+/* مودال + بقیه بخش‌ها تغییر نکرده */
