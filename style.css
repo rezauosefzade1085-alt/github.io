@@ -177,40 +177,110 @@ header {
 }
 .btn:hover { transform: scale(1.05); }
 
-/* ===== نوار دکمه‌ای جدید پایین سایت ===== */
-.bottom-bar {
+/* footer */
+footer {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0,0,20,0.75);
-  backdrop-filter: blur(10px);
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgba(0,150,255,0.4);
-  z-index: 2000;
+  left: 23px;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--accent);
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+  border: 1px solid rgba(0, 150, 255, 0.6);
+}
+footer .royal {
+  color: #ff80ff;
+  font-weight: bold;
+  font-family: 'Lalezar', cursive;
 }
 
-.bottom-bar a,
-.bottom-bar span {
-  background: linear-gradient(135deg,#0044ff,#ff0077);
-  padding: 10px 18px;
-  border-radius: 12px;
+/* group link */
+.group-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.group-link:hover { transform: scale(1.05); }
+
+/* admin float */
+.admin-float {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #016586, #4119ba);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.admin-float:hover { transform: scale(1.12); }
+
+/* مودال */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  perspective: 1000px;
+}
+.modal .modal-content {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-content {
+  background: rgba(20, 20, 40, 0.95);
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.close {
+  float: left;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* corner boxes */
+.corner-box {
+  position: fixed;
+  padding: 10px 15px;
+  background: rgba(10, 10, 30, 0.85);
+  border: 1px solid rgba(0, 200, 255, 0.4);
+  border-radius: 10px;
   color: #fff;
   font-family: 'Lalezar', cursive;
-  font-size: 1rem;
-  box-shadow: 0 0 15px rgba(0,150,255,0.4);
+  box-shadow: 0 0 20px rgba(0,200,255,0.3);
+  font-size: 0.9rem;
+  z-index: 1000;
 }
-
-@media(max-width:768px){
-  .bottom-bar a ,
-  .bottom-bar span{
-    font-size: .85rem;
-    padding: 8px 14px;
-  }
-}
-
-/* مودال + بقیه بخش‌ها تغییر نکرده */
+.bottom-left { bottom: 90px; left: 20px; }
+.bottom-right { bottom: 90px; right: 20px; }
