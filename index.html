@@ -1,286 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Lalezar&display=swap');
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رویال - کانال کلید زنی</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- دیوار مات پشت صفحه -->
+  <div id="bg-blur"></div>
 
-:root{
-  --primary-gradient-start: #000000;
-  --primary-gradient-end: #00215e;
-  --accent: #00d4ff;
-  --pink: #ff66ff;
-}
+  <div id="bg3d"></div>
 
-/* پایه */
-* { box-sizing: border-box; }
-html,body { height:100%; }
+  <header>رویال 🔑 کانال کلید زنی</header>
 
-body {
-  margin: 0;
-  font-family: 'Vazirmatn', sans-serif;
-  color: #fff;
-  direction: rtl;
-  overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
-  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-}
+  <main>
+    <div class="center-text">
+      <h1 class="spark-title">به سایت کلید زنی رویال خوش آمدید 🔑</h1>
+      <p>اینجا می‌تونی به کلیدهای درسی هر پایه دسترسی داشته باشی!</p>
+      <p>تمامی سوالات و پاسخنامه‌های موسسات قبل از جلسه اینجا برات بارگذاری میشه 💙</p>
+      <p>قلمچی / ماز / گزینه دو / گاج / کنکور و سوالات نهایی ❤️</p>
 
-/* دیوار مات مشکی متوسط پشت صفحه */
-#bg-blur {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  z-index: -2;
-}
+      <div class="info-box">
+        <p>
+          کلید زنی یکی از مهم‌ترین مراحل موفقیت در آزمون‌های آزمایشی و کنکور است.  
+          در این فرآیند، داوطلب پاسخ‌های خودش را با کلیدهای معتبر تطبیق می‌دهد تا  
+          نقاط قوت و ضعفش را شناسایی کند.  
+        </p>
+        <p>
+          در مجموعه <strong>رویال</strong>، هدف ما انتشار سریع و دقیق کلیدهای موسسات  
+          <span class="highlight">قلم‌چی، ماز، گزینه دو، گاج و سنجش</span> است تا  
+          دانش‌آموزان بتوانند قبل از اعلام رسمی نتایج، عملکرد خود را بسنجند و بهتر  
+          برنامه‌ریزی کنند.
+        </p>
+        <p>
+          کلید زنی فقط بررسی پاسخ درست نیست؛ فرصتی برای تحلیل، یادگیری و اصلاح  
+          اشتباهات است. با استفاده از کلیدها، می‌تونی مسیر رشد تحصیلیت رو دقیق‌تر دنبال کنی ✨
+        </p>
+      </div>
+    </div>
 
-/* 🌌 پس‌زمینه سه‌بعدی */
-#bg3d {
-  position: fixed;
-  inset: 0;
-  background: transparent;
-  overflow: hidden;
-  z-index: -1;
-}
-#bg3d::before,
-#bg3d::after {
-  content: "🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑";
-  position: absolute;
-  font-size: 2.5rem;
-  color: rgba(255, 215, 0, 0.06);
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  animation: floatKeys 30s linear infinite;
-  transform: rotateX(45deg) rotateY(25deg);
-}
-#bg3d::after {
-  animation-direction: reverse;
-  opacity: 0.06;
-}
-@keyframes floatKeys {
-  0% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
-  100% { transform: rotateX(360deg) rotateY(360deg) translateY(-50px); }
-}
+    <div class="join-box">
+      <p>به کانال ما بپیوندید:</p>
+      <a href="https://rubika.ir/klid_ghalmchi/BEDGIJBGFBHHAAGI" class="channel-link">@klid_ghalmchi💜</a>
+    </div>
 
-/* --- هدر --- */
-header {
-  background: linear-gradient(90deg, #ff0077, #0044ff);
-  padding: 25px;
-  text-align: center;
-  font-size: 2.4rem;
-  font-family: 'Lalezar', cursive;
-  color: #fff;
-  box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
-}
+    <div class="buttons">
+      <button class="btn download-btn" data-grade="7" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه هفتم
+      </button>
+      <button class="btn download-btn" data-grade="8" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه هشتم
+      </button>
+      <button class="btn download-btn" data-grade="9" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه نهم
+      </button>
+      <button class="btn download-btn" data-grade="10" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه دهم
+      </button>
+      <button class="btn download-btn" data-grade="11" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه یازدهم
+      </button>
+      <button class="btn download-btn" data-grade="12" data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
+        دانلود کلید پایه دوازدهم
+      </button>
+    </div>
+  </main>
 
-/* متن مرکزی */
-.center-text {
-  text-align: center;
-  margin: 60px auto;
-  text-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
-  padding: 0 15px;
-}
+  <footer>
+    طراحی شده توسط <span class="royal">Royal Team</span>
+  </footer>
 
-.spark-title {
-  color: #ff0033;
-  font-size: 2.5rem;
-  font-family: 'Lalezar', cursive;
-  text-shadow: 0 0 20px #ff0000, 0 0 40px #ff3366, 0 0 60px #ff0055;
-  animation: redSpark 1s infinite alternate;
-}
-@keyframes redSpark {
-  0%, 100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 30px #ff0033, 0 0 60px #ff3366;
-    color: #ffffff;
-  }
-  50% {
-    text-shadow: 0 0 5px #ff0033, 0 0 25px #ff3366;
-    color: #ff3366;
-  }
-}
+  <a href="https://rubika.ir/joing/GFDAHGAI0HPLAIENWNHRWMLGBCKLTKTV" 
+     target="_blank" class="group-link">📌 پیوست به گروهمون</a>
 
-.center-text p {
-  font-size: 1.1rem;
-  color: #ddd;
-}
+  <a href="#" class="admin-float" id="adminOpen" title="ارتباط با ادمین">💬</a>
 
-.info-box {
-  width: 75%;
-  margin: 45px auto 0;
-  padding: 25px 30px;
-  background: rgba(0, 0, 40, 0.6);
-  border: 1px solid rgba(0, 150, 255, 0.4);
-  border-radius: 18px;
-  line-height: 2.2;
-  font-size: 1rem;
-  color: #e0f7ff;
-  text-align: justify;
-  box-shadow: 0 0 25px rgba(0, 150, 255, 0.3);
-  backdrop-filter: blur(8px);
-}
+  <div id="adminModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content admin-modal">
+      <span class="close" id="adminClose" title="بستن">&times;</span>
+      <h3>ارتباط با ادمین</h3>
+      <p style="font-size:1.25rem; margin-top:12px;"><strong>@M_REZA1082</strong></p>
+    </div>
+  </div>
 
-.info-box .highlight {
-  color: var(--pink);
-  font-weight: bold;
-}
-
-/* join box */
-.join-box {
-  width: fit-content;
-  margin: 40px auto;
-  padding: 15px 25px;
-  background: rgba(0, 0, 30, 0.6);
-  border-radius: 15px;
-  border: 1px solid rgba(0, 150, 255, 0.5);
-  box-shadow: 0 0 25px rgba(0, 150, 255, 0.5);
-  text-align: center;
-  backdrop-filter: blur(10px);
-  animation: floatBox 5s ease-in-out infinite alternate;
-}
-@keyframes floatBox {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-8px); }
-}
-.join-box p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #fff;
-  font-family: 'Lalezar', cursive;
-}
-.channel-link {
-  display: inline-block;
-  color: #ff80ff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-top: 5px;
-  transition: 0.3s;
-}
-.channel-link:hover {
-  text-shadow: 0 0 15px #ff00ff;
-}
-
-/* دکمه‌ها */
-.buttons {
-  text-align: center;
-  margin-bottom: 100px;
-}
-.btn {
-  background: linear-gradient(90deg, #ff0077, #0044ff);
-  border: none;
-  color: white;
-  padding: 15px 35px;
-  margin: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: 0.25s;
-  font-family: 'Lalezar', cursive;
-}
-.btn:hover { transform: scale(1.05); }
-
-/* footer */
-footer {
-  position: fixed;
-  left: 23px;
-  bottom: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--accent);
-  padding: 8px 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
-  border: 1px solid rgba(0, 150, 255, 0.6);
-}
-footer .royal {
-  color: #ff80ff;
-  font-weight: bold;
-  font-family: 'Lalezar', cursive;
-}
-
-/* group link */
-.group-link {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-.group-link:hover { transform: scale(1.05); }
-
-/* admin float */
-.admin-float {
-  position: fixed;
-  bottom: 150px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #016586, #4119ba);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-.admin-float:hover { transform: scale(1.12); }
-
-/* مودال */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.65);
-  backdrop-filter: blur(6px);
-  perspective: 1000px;
-}
-.modal .modal-content {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: all 0.35s ease;
-}
-.modal.show .modal-content {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.modal-content {
-  background: rgba(20, 20, 40, 0.95);
-  margin: 10% auto;
-  padding: 25px;
-  border-radius: 15px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-}
-
-.close {
-  float: left;
-  font-size: 25px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* corner boxes */
-.corner-box {
-  position: fixed;
-  padding: 10px 15px;
-  background: rgba(10, 10, 30, 0.85);
-  border: 1px solid rgba(0, 200, 255, 0.4);
-  border-radius: 10px;
-  color: #fff;
-  font-family: 'Lalezar', cursive;
-  box-shadow: 0 0 20px rgba(0,200,255,0.3);
-  font-size: 0.9rem;
-  z-index: 1000;
-}
-.bottom-left { bottom: 90px; left: 20px; }
-.bottom-right { bottom: 90px; right: 20px; }
+  <script src="script.js"></script>
+</body>
+</html>
