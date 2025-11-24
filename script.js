@@ -1,78 +1,60 @@
-const gradeModal = document.getElementById("gradeModal");
-const gradeTitle = document.getElementById("gradeTitle");
-const gradeText = document.getElementById("gradeText");
+/* script.js
+   رفتار: دکمه‌های دانلود فایل (data-file) را باز می‌کند.
+   مودال ادمین: باز و بسته می‌شود و آی‌دی را نشان می‌دهد.
+*/
 
-// لینک دانلود برای هر پایه (PDF)
-const gradeDownloads = {
-  "7": "downloads/paye7.pdf",
-  "8": "downloads/paye8.pdf",
-  "9": "downloads/paye9.pdf",
-  "10": "downloads/paye10.pdf",
-  "11": "downloads/paye11.pdf",
-  "12": "downloads/paye12.pdf"
-};
-
-// وقتی روی دکمه‌ها کلیک می‌کنی
-document.querySelectorAll(".btn").forEach(btn => {
+/* دانلود با باز کردن لینک در تب جدید (همان رفتار قبلی سایتت) */
+document.querySelectorAll(".download-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    const grade = btn.getAttribute("data-grade");
-    openGradeModal(grade);
+    const file = btn.getAttribute("data-file");
+    if (!file) return;
+    // باز کردن در تب جدید — مرورگر تصمیم به دانلود یا نمایش خواهد گرفت
+    window.open(file, "_blank");
   });
 });
 
-// باز کردن مودال برای هر پایه
-function openGradeModal(grade) {
-  const grades = {
-    "7": "کلید پایه هفتم",
-    "8": "کلید پایه هشتم",
-    "9": "کلید پایه نهم",
-    "10": "کلید پایه دهم",
-    "11": "کلید پایه یازدهم",
-    "12": "کلید پایه دوازدهم"
-  };
-
-  gradeTitle.innerText = grades[grade];
-
-  gradeText.innerHTML = `
-    <p>فایل کلید مربوط به این پایه آماده‌ی دانلود است 📄</p>
-    <br>
-    <button id="downloadBtn" class="btn" style="margin-top:10px;">⬇ دانلود فایل PDF</button>
-  `;
-
-  gradeModal.style.display = "block";
-  setTimeout(() => gradeModal.classList.add("show"), 10);
-
-  // وقتی دکمه دانلود زده میشه
-  const downloadBtn = document.getElementById("downloadBtn");
-  downloadBtn.addEventListener("click", () => {
-    const link = document.createElement("a");
-    link.href = gradeDownloads[grade];
-    link.download = gradeDownloads[grade].split("/").pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-}
-
-// بستن مودال پایه‌ها
-function closeGradeModal() {
-  gradeModal.classList.remove("show");
-  setTimeout(() => gradeModal.style.display = "none", 500);
-}
-
-// مودال ادمین
+/* مودال ادمین */
+const adminOpen = document.getElementById("adminOpen");
 const adminModal = document.getElementById("adminModal");
+const adminClose = document.getElementById("adminClose");
 
 function openAdminModal() {
+  if (!adminModal) return;
   adminModal.style.display = "block";
+  // دسترسی‌پذیری: aria-hidden
+  adminModal.setAttribute("aria-hidden", "false");
+  setTimeout(() => adminModal.classList.add("show"), 10);
 }
 
 function closeAdminModal() {
-  adminModal.style.display = "none";
+  if (!adminModal) return;
+  adminModal.classList.remove("show");
+  adminModal.setAttribute("aria-hidden", "true");
+  setTimeout(() => adminModal.style.display = "none", 300);
 }
 
-// بستن مودال با کلیک روی پس‌زمینه
-window.addEventListener("click", e => {
-  if (e.target === gradeModal) closeGradeModal();
+// اگر دکمه شناسه‌ای در HTML نداشتی، از عنصر شناور استفاده می‌کنیم
+if (adminOpen) {
+  adminOpen.addEventListener("click", (e) => {
+    e.preventDefault();
+    openAdminModal();
+  });
+}
+if (adminClose) {
+  adminClose.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeAdminModal();
+  });
+}
+
+// بستن مودال با کلیک بیرون محتوا
+window.addEventListener("click", (e) => {
   if (e.target === adminModal) closeAdminModal();
+});
+
+// بستن با کلید Escape
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && adminModal && adminModal.style.display === "block") {
+    closeAdminModal();
+  }
 });
