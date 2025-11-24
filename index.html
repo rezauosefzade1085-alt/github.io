@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div id="bg3d"></div>
+  <div id="bg-blur"></div>
 
   <header>رویال 🔑 کانال کلید زنی</header>
 
@@ -45,42 +45,12 @@
 
     <div class="buttons">
 
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="7"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-        دانلود کلید پایه هفتم 
-      </button>
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="8"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-        دانلود کلید پایه هشتم 
-      </button>
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="9"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-      دانلود کلید پایه نهم
-      </button>
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="10"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-        دانلود کلید پایه دهم
-      </button>
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="11"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-        دانلود کلید پایه یازدهم
-      </button>
-      <!-- 📥 دکمه دانلود PDF پایه هفتم -->
-      <button class="btn download-btn"
-        data-grade="12"
-        data-file="https://uploadkon.ir/uploads/7ca523_25paye7.pdf">
-        دانلود کلید پایه دوازدهم
-      </button>
+      <button class="btn download-btn" data-file="downloads/paye7.pdf">دانلود کلید پایه هفتم</button>
+      <button class="btn download-btn" data-file="downloads/paye8.pdf">دانلود کلید پایه هشتم</button>
+      <button class="btn download-btn" data-file="downloads/paye9.pdf">دانلود کلید پایه نهم</button>
+      <button class="btn download-btn" data-file="downloads/paye10.pdf">دانلود کلید پایه دهم</button>
+      <button class="btn download-btn" data-file="downloads/paye11.pdf">دانلود کلید پایه یازدهم</button>
+      <button class="btn download-btn" data-file="downloads/paye12.pdf">دانلود کلید پایه دوازدهم</button>
 
     </div>
   </main>
@@ -94,36 +64,16 @@
 
   <a href="#" class="admin-float" onclick="openAdminModal()" title="ارتباط با ادمین">💬</a>
 
-  <div id="gradeModal" class="modal">
-    <div class="modal-content grade-3d">
-      <span class="close" onclick="closeGradeModal()">&times;</span>
-      <h3 id="gradeTitle"></h3>
-      <p id="gradeText"></p>
-    </div>
-  </div>
-
+  <!-- مودال ادمین -->
   <div id="adminModal" class="modal">
     <div class="modal-content admin-modal">
       <span class="close" onclick="closeAdminModal()">&times;</span>
       <h3>ارتباط با ادمین</h3>
-      <p>ادمین : <strong>@M_REZA1082</strong></p>
+      <p style="font-size:1.2rem; color:#ff80ff;">@M_REZA1082</p>
     </div>
   </div>
 
-  <div class="corner-box bottom-left">💡 کلید زنی یعنی درک، نه فقط حفظ!</div>
-  <div class="corner-box bottom-right">🔥 Royal همراه تو تا قله‌ی موفقیت!</div>
-
   <script src="script.js"></script>
-
-  <!-- 📥 اسکریپت دکمه دانلود -->
-  <script>
-    document.querySelectorAll(".download-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const file = btn.getAttribute("data-file");
-        window.open(file, "_blank");
-      });
-    });
-  </script>
 
 </body>
 </html>
