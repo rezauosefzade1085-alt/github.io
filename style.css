@@ -26,12 +26,12 @@ body {
 #bg-blur {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5); /* مات متوسط */
+  background: rgba(0,0,0,0.5);
   backdrop-filter: blur(8px);
-  z-index: -2; /* پشت bg3d */
+  z-index: -2;
 }
 
-/* 🌌 پس‌زمینه سه‌بعدی (متن کلیدی) */
+/* 🌌 پس‌زمینه سه‌بعدی */
 #bg3d {
   position: fixed;
   inset: 0;
@@ -89,11 +89,11 @@ header {
 }
 @keyframes redSpark {
   0%, 100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 30px #ff0033, 0 0 60px #ff3366, 0 0 90px #ff6699;
+    text-shadow: 0 0 10px #ff0000, 0 0 30px #ff0033, 0 0 60px #ff3366;
     color: #ffffff;
   }
   50% {
-    text-shadow: 0 0 5px #ff0033, 0 0 25px #ff3366, 0 0 50px #ff99cc, 0 0 70px #ffcccc;
+    text-shadow: 0 0 5px #ff0033, 0 0 25px #ff3366;
     color: #ff3366;
   }
 }
@@ -155,7 +155,7 @@ header {
   transition: 0.3s;
 }
 .channel-link:hover {
-  text-shadow: 0 0 15px #ff00ff, 0 0 20px #ff66ff;
+  text-shadow: 0 0 15px #ff00ff;
 }
 
 /* دکمه‌ها */
@@ -232,7 +232,7 @@ footer .royal {
 }
 .admin-float:hover { transform: scale(1.12); }
 
-/* مودال (عمومی برای ادمین) */
+/* مودال */
 .modal {
   display: none;
   position: fixed;
@@ -242,7 +242,6 @@ footer .royal {
   backdrop-filter: blur(6px);
   perspective: 1000px;
 }
-
 .modal .modal-content {
   transform: scale(0.8);
   opacity: 0;
@@ -286,27 +285,15 @@ footer .royal {
 .bottom-left { bottom: 90px; left: 20px; }
 .bottom-right { bottom: 90px; right: 20px; }
 
-/* موبایل */
-@media (max-width: 768px) {
-  header { font-size: 1.8rem; padding: 18px; }
-  .spark-title { font-size: 2rem; }
-  .info-box { width: 90%; padding: 18px; font-size: 0.95rem; line-height:1.8; }
-  .buttons .btn { padding: 12px 18px; margin: 8px; font-size: 1rem; }
-  .modal-content { width: 90%; margin: 18% auto; padding: 18px; }
-  .corner-box { font-size: 0.8rem; padding: 8px 12px; }
-  .admin-float { width:45px; height:45px; font-size:22px; }
-}
-/* ================================
-   📱 نسخه مخصوص موبایل (Mobile Only)
-   ================================ */
-
+/* =======================================
+   📱 نسخه نهایی مخصوص موبایل (بهینه‌شده)
+   ======================================= */
 @media (max-width: 768px) {
 
   body {
-    padding-bottom: 70px; /* برای این‌که محتوا به هم نچسبد */
+    padding-bottom: 70px;
   }
 
-  /* هدر کوچک‌تر و خواناتر */
   header {
     font-size: 1.7rem;
     padding: 18px;
@@ -321,7 +308,6 @@ footer .royal {
   .center-text p {
     font-size: 1rem;
     line-height: 1.9;
-    margin-bottom: 10px;
   }
 
   .info-box {
@@ -333,9 +319,8 @@ footer .royal {
     margin-bottom: 10px;
   }
 
-  /* ⭐️ دکمه‌های پایه‌ها می‌رن پایین‌تر و کاملاً جدا از متن */
   .buttons {
-    margin-top: 40px !important;    /* دکمه‌ها از متن جدا می‌شوند */
+    margin-top: 40px !important;
     margin-bottom: 110px !important;
     padding: 0 10px;
   }
@@ -346,10 +331,8 @@ footer .royal {
     margin: 12px auto;
     padding: 14px;
     font-size: 1.05rem;
-    border-radius: 10px;
   }
 
-  /* باکس پیوستن به کانال کوچک‌تر */
   .join-box {
     margin-top: 35px;
     padding: 12px 20px;
@@ -359,14 +342,12 @@ footer .royal {
     font-size: 1rem;
   }
 
-  /* مودال موبایل */
   .modal-content {
     width: 88% !important;
     margin: 30% auto !important;
     padding: 20px;
   }
 
-  /* دکمه ادمین */
   .admin-float {
     width: 48px;
     height: 48px;
@@ -374,14 +355,12 @@ footer .royal {
     bottom: 130px;
   }
 
-  /* لینک گروه */
   .group-link {
     font-size: 0.9rem;
     padding: 10px 18px;
     bottom: 15px;
   }
 
-  /* فوتر موبایل */
   footer {
     font-size: 0.85rem;
     bottom: 15px;
@@ -389,5 +368,3 @@ footer .royal {
     padding: 6px 12px;
   }
 }
-
-
