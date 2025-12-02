@@ -1,286 +1,229 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Lalezar&display=swap');
-
-:root{
-  --primary-gradient-start: #000000;
-  --primary-gradient-end: #00215e;
-  --accent: #00d4ff;
-  --pink: #ff66ff;
-}
-
-/* پایه */
-* { box-sizing: border-box; }
-html,body { height:100%; }
-
+/* استایل کلی صفحه */
 body {
-  margin: 0;
-  font-family: 'Vazirmatn', sans-serif;
-  color: #fff;
-  direction: rtl;
-  overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
-  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    margin: 0;
+    font-family: "Vazirmatn", sans-serif;
+    direction: rtl;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
-/* دیوار مات مشکی متوسط پشت صفحه */
+/* پس‌زمینه تار */
 #bg-blur {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(25px);
+    z-index: -2;
 }
 
-/* 🌌 پس‌زمینه سه‌بعدی */
+/* افکت گرادیان 3D */
 #bg3d {
-  position: fixed;
-  inset: 0;
-  background: transparent;
-  overflow: hidden;
-  z-index: -1;
-}
-#bg3d::before,
-#bg3d::after {
-  content: "🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑 🔑";
-  position: absolute;
-  font-size: 2.5rem;
-  color: rgba(255, 215, 0, 0.06);
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  animation: floatKeys 30s linear infinite;
-  transform: rotateX(45deg) rotateY(25deg);
-}
-#bg3d::after {
-  animation-direction: reverse;
-  opacity: 0.06;
-}
-@keyframes floatKeys {
-  0% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
-  100% { transform: rotateX(360deg) rotateY(360deg) translateY(-50px); }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.25), transparent),
+                radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2), transparent);
+    z-index: -3;
 }
 
-/* --- هدر --- */
+/* هدر */
 header {
-  background: linear-gradient(90deg, #ff0077, #0044ff);
-  padding: 25px;
-  text-align: center;
-  font-size: 2.4rem;
-  font-family: 'Lalezar', cursive;
-  color: #fff;
-  box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+    background: rgba(138, 43, 226, 0.4);
+    padding: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* متن مرکزی */
+/* متن وسط */
 .center-text {
-  text-align: center;
-  margin: 60px auto;
-  text-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
-  padding: 0 15px;
+    text-align: center;
+    margin: 35px 15px;
 }
 
+/* افکت جرقه‌ای عنوان */
 .spark-title {
-  color: #ff0033;
-  font-size: 2.5rem;
-  font-family: 'Lalezar', cursive;
-  text-shadow: 0 0 20px #ff0000, 0 0 40px #ff3366, 0 0 60px #ff0055;
-  animation: redSpark 1s infinite alternate;
-}
-@keyframes redSpark {
-  0%, 100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 30px #ff0033, 0 0 60px #ff3366;
-    color: #ffffff;
-  }
-  50% {
-    text-shadow: 0 0 5px #ff0033, 0 0 25px #ff3366;
-    color: #ff3366;
-  }
+    font-size: 2.2rem;
+    color: #bb5af4;
+    text-shadow: 0 0 12px #b300ff, 0 0 25px #ff0000;
+    animation: spark 2s infinite alternate;
 }
 
-.center-text p {
-  font-size: 1.1rem;
-  color: #ddd;
+@keyframes spark {
+    0% { text-shadow: 0 0 10px #ff00ff; }
+    100% { text-shadow: 0 0 25px #b300ff; }
 }
 
+/* باکس توضیحات */
 .info-box {
-  width: 75%;
-  margin: 45px auto 0;
-  padding: 25px 30px;
-  background: rgba(0, 0, 40, 0.6);
-  border: 1px solid rgba(0, 150, 255, 0.4);
-  border-radius: 18px;
-  line-height: 2.2;
-  font-size: 1rem;
-  color: #e0f7ff;
-  text-align: justify;
-  box-shadow: 0 0 25px rgba(0, 150, 255, 0.3);
-  backdrop-filter: blur(8px);
+    margin: 30px auto;
+    width: 85%;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 20px;
+    border-radius: 14px;
+    line-height: 2;
+    font-size: 1.1rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.info-box .highlight {
-  color: var(--pink);
-  font-weight: bold;
+.highlight {
+    color: #8633f3d5;
+    font-weight: bold;
 }
 
-/* join box */
+/* بخش عضویت */
 .join-box {
-  width: fit-content;
-  margin: 40px auto;
-  padding: 15px 25px;
-  background: rgba(0, 0, 30, 0.6);
-  border-radius: 15px;
-  border: 1px solid rgba(0, 150, 255, 0.5);
-  box-shadow: 0 0 25px rgba(0, 150, 255, 0.5);
-  text-align: center;
-  backdrop-filter: blur(10px);
-  animation: floatBox 5s ease-in-out infinite alternate;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.3rem;
 }
-@keyframes floatBox {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-8px); }
-}
-.join-box p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #fff;
-  font-family: 'Lalezar', cursive;
-}
+
 .channel-link {
-  display: inline-block;
-  color: #ff80ff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-top: 5px;
-  transition: 0.3s;
+    display: inline-block;
+    background: #2a26a4;
+    padding: 10px 25px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
 }
+
 .channel-link:hover {
-  text-shadow: 0 0 15px #ff00ff;
+    background: #9f52ff;
 }
 
-/* دکمه‌ها */
+/* دکمه‌های دانلود */
 .buttons {
-  text-align: center;
-  margin-bottom: 100px;
+    display: grid;
+    gap: 15px;
+    padding: 20px;
 }
+
 .btn {
-  background: linear-gradient(90deg, #ff0077, #0044ff);
-  border: none;
-  color: white;
-  padding: 15px 35px;
-  margin: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: 0.25s;
-  font-family: 'Lalezar', cursive;
+    background: rgba(138, 43, 226, 0.4);
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+    text-shadow: 0 0 8px #9a4bff;
 }
-.btn:hover { transform: scale(1.05); }
 
-/* footer */
+.btn:hover {
+    background: rgba(138, 43, 226, 0.7);
+    transform: scale(1.04);
+}
+
+/* فوتر */
 footer {
-  position: fixed;
-  left: 23px;
-  bottom: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--accent);
-  padding: 8px 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
-  border: 1px solid rgba(0, 150, 255, 0.6);
-}
-footer .royal {
-  color: #ff80ff;
-  font-weight: bold;
-  font-family: 'Lalezar', cursive;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
 }
 
-/* group link */
+.royal {
+    color: #c27bff;
+    font-weight: bold;
+}
+
+/* لینک گروه */
 .group-link {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
+    position: fixed;
+    bottom: 18px;
+    left: 18px;
+    background: #9f37fa;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px #b86dff;
+    transition: 0.3s;
 }
-.group-link:hover { transform: scale(1.05); }
 
-/* admin float */
+.group-link:hover {
+    background: #be7aff;
+    transform: scale(1.05);
+}
+
+/* دکمه شناور ادمین */
 .admin-float {
-  position: fixed;
-  bottom: 150px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #016586, #4119ba);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    background: #1f024e;
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 15px #9b4aff;
+    transition: 0.25s;
 }
-.admin-float:hover { transform: scale(1.12); }
 
-/* مودال */
+.admin-float:hover {
+    transform: scale(1.1);
+}
+
+/* 📌 مودال (جدید) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.65);
-  backdrop-filter: blur(6px);
-  perspective: 1000px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(4px);
+    padding-top: 100px;
+    opacity: 0;
+    transition: opacity .25s ease;
 }
-.modal .modal-content {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: all 0.35s ease;
-}
-.modal.show .modal-content {
-  transform: scale(1);
-  opacity: 1;
+
+.modal.show {
+    opacity: 1;
 }
 
 .modal-content {
-  background: rgba(20, 20, 40, 0.95);
-  margin: 10% auto;
-  padding: 25px;
-  border-radius: 15px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    background: rgba(20,20,20,0.85);
+    margin: auto;
+    padding: 22px;
+    border-radius: 14px;
+    width: 78%;
+    max-width: 360px;
+    color: white;
+    animation: fadeIn .3s ease;
+    box-shadow: 0 0 20px rgba(95, 5, 230, 0.6);
+}
+
+@keyframes fadeIn {
+    from { transform: scale(.92); opacity: .1; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .close {
-  float: left;
-  font-size: 25px;
-  color: #fff;
-  cursor: pointer;
+    color: #ccc;
+    float: left;
+    font-size: 32px;
+    cursor: pointer;
 }
 
-/* corner boxes */
-.corner-box {
-  position: fixed;
-  padding: 10px 15px;
-  background: rgba(10, 10, 30, 0.85);
-  border: 1px solid rgba(0, 200, 255, 0.4);
-  border-radius: 10px;
-  color: #fff;
-  font-family: 'Lalezar', cursive;
-  box-shadow: 0 0 20px rgba(0,200,255,0.3);
-  font-size: 0.9rem;
-  z-index: 1000;
+.close:hover {
+    color: #fff;
 }
-.bottom-left { bottom: 90px; left: 20px; }
-.bottom-right { bottom: 90px; right: 20px; }
