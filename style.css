@@ -74,11 +74,6 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.highlight {
-    color: #8633f3d5;
-    font-weight: bold;
-}
-
 /* بخش عضویت */
 .join-box {
     text-align: center;
@@ -102,7 +97,7 @@ header {
     background: #9f52ff;
 }
 
-/* دکمه‌های دانلود */
+/* دکمه‌ها */
 .buttons {
     display: grid;
     gap: 15px;
@@ -125,6 +120,24 @@ header {
 .btn:hover {
     background: rgba(138, 43, 226, 0.7);
     transform: scale(1.04);
+}
+
+/* مربع قرمز جرقه‌ای در انتهای دکمه */
+.tag-red {
+    display: inline-block;
+    background: #ff1e1e;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-right: 10px;
+    animation: tagBlink 1.2s infinite alternate;
+    box-shadow: 0 0 10px #ff3b3b;
+}
+
+@keyframes tagBlink {
+    0% { opacity: 0.75; box-shadow: 0 0 6px #ff3333; }
+    100% { opacity: 1; box-shadow: 0 0 14px #ff5555; }
 }
 
 /* فوتر */
@@ -161,7 +174,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* دکمه شناور ادمین */
+/* دکمه ادمین */
 .admin-float {
     position: fixed;
     bottom: 18px;
@@ -183,7 +196,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* 📌 مودال (جدید) */
+/* مودال */
 .modal {
     display: none;
     position: fixed;
