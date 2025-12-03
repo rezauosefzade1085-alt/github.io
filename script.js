@@ -50,7 +50,7 @@ document.querySelectorAll(".open-grade").forEach(btn => {
     });
 });
 
-/* بستن مودال */
+/* بستن مودال رشته‌ای */
 gradeClose.onclick = () => {
     gradeModal.classList.remove("show");
     setTimeout(() => gradeModal.style.display = "none", 200);
@@ -58,4 +58,23 @@ gradeClose.onclick = () => {
 
 window.addEventListener("click", (e) => {
     if (e.target === gradeModal) gradeClose.click();
+});
+
+/* مودال ادمین */
+const adminModal = document.getElementById("adminModal");
+const adminOpen = document.getElementById("adminOpen");
+const adminClose = document.getElementById("adminClose");
+
+adminOpen.onclick = () => {
+    adminModal.style.display = "block";
+    setTimeout(() => adminModal.classList.add("show"), 10);
+};
+
+adminClose.onclick = () => {
+    adminModal.classList.remove("show");
+    setTimeout(() => adminModal.style.display = "none", 200);
+};
+
+window.addEventListener("click", (e) => {
+    if (e.target === adminModal) adminClose.click();
 });
